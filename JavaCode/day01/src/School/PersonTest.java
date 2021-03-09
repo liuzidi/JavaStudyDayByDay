@@ -8,7 +8,7 @@ public class PersonTest {
         p1.sex = 1;
         p1.showAge();
         p1.study();
-        int newAge = p1.addAge(23);
+        int newAge = p1.addAge(20);
         p1.showAge();
         System.out.println(newAge);
         System.out.println("System.out:");
