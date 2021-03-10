@@ -608,7 +608,7 @@ return 结束一个方法；
 
 
 
-#### 2.2.3.1 eclipese 
+#### 2.2.3.1 eclipse 
 
 快捷键：
 
@@ -1051,6 +1051,119 @@ this super static final abstract interface package import
 
 
 
+**return的作用：**
+
+1.使用范围：在方法体内
+
+2，作用：结束一个方法
+
+注意事项：方法的使用中可以使用类的属性和方法
+
+方法A中又调用了方法A：递归
+
+方法中不能定义方法
+
+
+
+**Java的public关键字：**
+
+类和类文件名必须一致，而且一个Java文件只能有一个public的关键字声明的类
+
+
+
+**匿名对象：**
+
+我们创建的对象没有显式的给一个对象赋名，并使用它，只能使用一次
+
+
+
+**Method的重载：**
+
+同一个类，相同方法名
+
+但是：参数列表不同，参数个数不同，参数类型不同；
+
+注意：判断是否是重载，跟方法的权限修饰符，返回值类型，形参变量名，方法体都没有关系。
+
+
+
+可变个数形参的方法：
+
+可变个数形参的格式： 
+
+```java
+...<数据类型>
+```
+
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210310182018586.png" alt="image-20210310182018586" style="zoom:80%;" />
+
+```java
+public class MethodArgsTest {
+    public static void main(String []args){
+        new MethodArgs().show(new String[]{"AA","BB","CC"});
+    }
+}
+class MethodArgs{
+    public void show(int i){
+        System.out.println("int i");
+    }
+    public void show(String s){
+        System.out.println("String s");
+    }
+    public void show(String ...strs){
+        System.out.println("String ...strs");
+        for(int i= 0; i<strs.length;i++){
+            System.out.println(strs[i]);
+        }
+    }
+}
+
+    //上面的和以下一样，二者不能共存,都是指的是字符串数组
+  public void show(String []strs){
+      System.out.println("String ...strs");
+ }
+     
+```
+
+方法的传递方式:值传递机制
+
+基本数据类型的实参和形参机制导致，原函数的数据并未发生改变；
+
+引用数据类型则不会
+
+注意：String类型不同：String是一种特殊的引用数据类型
+
+(1) String str1 = "abcd"的实现过程：首先栈区创建str引用，然后在String池(独立于栈和堆而存在，存储不可变量)中寻找其指向的内容为"abcd"的对象，如果String池中没有，则创建一个，然后str指向String池中的对象，如果有，则直接将str1指向"abcd""；如果后来又定义了字符串变量 str2 = "abcd",则直接将str2引用指向String池中已经存在的“abcd”，不再重新创建对象；当str1进行了赋值(str1=“abc”)，则str1将不再指向"abcd"，而是重新指String池中的"abc"，此时如果定义String str3 = "abc",进行str1 == str3操作，返回值为true，因为他们的值一样，地址一样，但是如果内容为"abc"的str1进行了字符串的+连接str1 = str1+"d"；此时str1指向的是在堆中新建的内容为"abcd"的对象，即此时进行str1==str2，返回值false，因为地址不一样。
+
+```java
+public class TT {
+    public static void main (String [] args){
+        String s ="sssad";
+        String s1 ="sssad";
+        System.out.println(s.hashCode());
+        System.out.println(s1.hashCode());
+        System.out.println("----");
+        s1="sa";
+        System.out.println(s.hashCode());
+        System.out.println(s1.hashCode());;
+        System.out.println("----");
+        s1 ="sssad";
+        System.out.println(s.hashCode());
+        System.out.println(s1.hashCode());
+    }
+}
+
+结果：
+109744502
+109744502
+----
+109744502
+3662
+----
+109744502
+109744502
+```
+
 变量的分类：
 
 方式一：按照数据类型
@@ -1072,6 +1185,10 @@ this super static final abstract interface package import
 命名参数 
 
 匹配参数第一个可以是匹配符
+
+
+
+### Git
 
 git操作总结
 
@@ -1101,7 +1218,7 @@ git log --oneline:只显示过去
 
 更简洁的形式显示（缩短哈希值）
 
-多屏显示操作：
+多屏显示操作： 
 
 空格向下翻页
 
@@ -1143,33 +1260,11 @@ git 分支
 
 ![image-20210216194026669](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216194026669.png)
 
-![image-20210216194132993](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216194132993.png)
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216194132993.png" alt="image-20210216194132993" style="zoom:80%;" />
 
 
 
-继续java
 
-return的作用：
-
-1.使用范围：在方法体内
-
-2，作用：结束一个方法
-
-方法的使用中可以使用类的属性和方法
-
-方法A中又调用了方法A：递归
-
-方法中不能定义方法
-
-Java的public关键字
-
-类和类文件名必须一致，而且一个Java文件只能有一个public的关键字声明的类
-
-
-
-匿名对象
-
-我们创建的对象没有显式的给一个对象赋名，并使用它，只能使用一次
 
 
 
