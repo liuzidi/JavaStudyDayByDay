@@ -12,6 +12,8 @@ public class ArrayTest {
          *           <variableName>[0] = new <classType>();
          */
 
+
+
     }
 }
 class aa{
