@@ -1360,3 +1360,53 @@ name=liuzidi
 
 ----
 
+![image-20210311203149616](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311203149616.png)
+
+![image-20210311203213438](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311203213438.png)
+
+---
+
+#### 2.2.4.11 import关键字
+
+---
+
+import:导入
+
+1.在源文件中显式的使用import结构导入指定包下的类，接口
+
+2.声明在包的声明和类的声明之间
+
+3.如果需要导入多个结构，则并列写出即可。
+
+4.可以使用” xxx.* “的方式，表示可以导入xxx包下的所有结构
+
+如：
+
+```java
+//import java.util.HashMap; 非法！
+package Test;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.HashMap;
+//声明在包的声明之后，在类的声明之前
+//等同于 import java.util.*
+public class importTest {
+    Scanner a =null;
+    ArrayList list =new ArrayList();
+    HashMap map= new HashMap();
+}
+//import java.util.HashMap; 非法！
+class test{
+
+}
+```
+
+5.如果使用的类是java.lang包定义的，则可以省略import结构
+
+6.如果使用的类或接口是本包下定义的，则可以忽略import结构，换言之，不在本包的需要import关键字调用
+
+7.当源文件中，使用了不同包下的同名的类，则必须至少有一个全类名的方式显示
+
+![image-20210311204949626](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311204949626.png)
+
+P240
