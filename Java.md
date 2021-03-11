@@ -904,7 +904,6 @@ int [][]arr=new int [4][];
 ```java
 import java.util.Arrays;
 Arrays.equals(a,b);
-
 ```
 
 数组中常见异常：
@@ -959,8 +958,6 @@ import java.util.Arrays
 class person{};
 person p1 =new person();
 person p2 = p1;//p1 p2指向同一块堆空间
-
-
 ```
 
 对象的创建
@@ -1131,7 +1128,7 @@ class MethodArgs{
 
 引用数据类型则不会
 
-注意：String类型不同：String是一种特殊的引用数据类型
+注意：String类型不同：String是一种特殊的引用数据类型，在字符串常量池中寻找；
 
 (1) String str1 = "abcd"的实现过程：首先栈区创建str引用，然后在String池(独立于栈和堆而存在，存储不可变量)中寻找其指向的内容为"abcd"的对象，如果String池中没有，则创建一个，然后str指向String池中的对象，如果有，则直接将str1指向"abcd""；如果后来又定义了字符串变量 str2 = "abcd",则直接将str2引用指向String池中已经存在的“abcd”，不再重新创建对象；当str1进行了赋值(str1=“abc”)，则str1将不再指向"abcd"，而是重新指String池中的"abc"，此时如果定义String str3 = "abc",进行str1 == str3操作，返回值为true，因为他们的值一样，地址一样，但是如果内容为"abc"的str1进行了字符串的+连接str1 = str1+"d"；此时str1指向的是在堆中新建的内容为"abcd"的对象，即此时进行str1==str2，返回值false，因为地址不一样。
 
@@ -1166,117 +1163,118 @@ public class TT {
 
 递归方法（recursion）：
 
+自己调用自己；
 
+#### **2.2.4.7 封装与隐藏**
 
+程序设计追求“高内聚，低耦合”
 
+高内聚：内部数据操作细节自己完成，不允许干涉；
 
+低耦合，仅对外暴露少量方法用于使用；
 
+隐藏内部的复杂性，之对外公开简单的接口，便于外界调用，从而提高系统的可扩展性和可维护性。这就是封装性的设计思想。
 
-变量的分类：
+---
 
-方式一：按照数据类型
+private限制访问：
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210208140720731.png" alt="image-20210208140720731" style="zoom:80%;" />
+可以避免用户使用对象.属性的方式进行赋值
 
-方式二：	
+---
 
-![image-20210208141057108](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210208141057108.png)
+**封装性体现：**
 
-### LESS
+1.我们将类的属性私有化（private），同时，提供公共（public）的方法来获取（getxxx）和设置（setxxx）；
 
-![image-20210216095340965](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216095340965.png)
+getxxx方法有返回值，setxxx方法没有返回值；
 
-无形参的
+2.拓展： 
 
-![image-20210216094959180](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216094959180.png)
+1.不对外暴露私有的方法
 
-命名参数 
+2.单例模式
 
-匹配参数第一个可以是匹配符；
+---
 
+**权限修饰符**
 
+Java规定四种权限: private, 缺省， protected，public
 
-### Git
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311151937540.png" alt="image-20210311151937540" style="zoom:80%;" />
 
-git操作总结
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216181928971.png" alt="image-20210216181928971" style="zoom: 50%;" />
 
-**1.状态查看操作**
+---
 
-git status
+**类的构造器（构造方法）：**
 
-查看工作区和暂存区的状态
+Constructor：
 
-**2.添加操作**
+**构造器的作用：**
 
-git add<文件名>
+创建对象一般方式：创建类的对象：new+构造器
 
-**3.查看历史记录**
+1.如果没有显式地定义一个构造器，则系统默认提供一个空参地构造器
 
-git log
+2.定义构造器地格式：权限修饰符 类名（形参列表）{  }
 
-完整显示
+3.一个类中定义的多个构造器之后，系统不在提供默认地空参构造器
 
-git log --pretty=oneline
+**构造器格式：**
 
-用一行显示
+```java
+//
+class Person{
+    //创建类的对象：new+构造器
+	public Person(){
+    	System.out.println("构造器生成");
 
-git log --oneline:只显示过去
+		}
+}
+```
 
-更简洁的形式显示（缩短哈希值）
+---
 
-多屏显示操作： 
+**总结：属性赋值的先后顺序**
 
-空格向下翻页
+   <img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311161034818.png" alt="image-20210311161034818" style="zoom:80%;" />
 
-b向上翻页
+---
 
-q 退出
+**拓展知识：JavaBean**
 
-4.前进后退
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311161159719.png" alt="image-20210311161159719" style="zoom: 67%;" />
 
-tail -n 3文件名（打开对应文件并展示最后三行的内容）
+---
 
-git reflog
+拓展知识：UML类图
 
-HEAD@{移动到当前版本需要多少步}
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311163357276.png" alt="image-20210311163357276" style="zoom: 50%;" />
 
-git reset--hard(索引值：哈希值)
 
- 使用^符号：只能后退 git reset --hard HEAD^^^（退3步）
 
-使用~符号：只能后退  git reset --hard HEAD~n（退n步）
+#### 2.2.4.8 this关键字
 
+---
 
+this可以用来修饰：属性，方法，**构造器**；
 
-reset命令的三个参数对比
+this修饰属性和方法，this可以理解为：当前对象或者当前正在创建的对象；
 
---soft：仅在本地库移动HEAD指针
+**this的应用场合：**
 
---mixed：再本地库移动HEAD指针和重置暂存区
+在类的方法中，我们可以利用this.属性和this.方法来进行调用，通常情况下我们可以省略“this.”特殊情况下，如果方法的形参和类的属性同名时，我们必须显式地使用这种方式来表示变量是属性，而非形参。
 
---hard ：三区全部移动到相应的指针上
+**this调用构造器的场合：**
 
-删除文件
+在一个构造器中调用另一个构造器（只能调用其他构造器）
 
-rm 文件名
+1.我们在类的构造器中，可以显式地使用“this（形参列表）”方式，调用本类中地指定地其他构造器
 
-git diff 比较两个文件的不同
+ 2.构造器中不能通过“this（形参列表）”方式调用自己。
 
-git 分支
-
-![image-20210216194026669](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216194026669.png)
-
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210216194132993.png" alt="image-20210216194132993" style="zoom:80%;" />
-
-
-
-
-
-
-
-
+---
 
 
 
