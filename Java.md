@@ -1274,7 +1274,89 @@ this修饰属性和方法，this可以理解为：当前对象或者当前正在
 
  2.构造器中不能通过“this（形参列表）”方式调用自己。
 
+```java
+package Test;
+
+public class ThisTest {
+    public static void main(String[]args){
+        man man1= new man();
+        System.out.println("..........");
+        man man2 =new man(13);
+        System.out.println("..........");
+        man man3 =new man(12,"liuzidi");
+    }
+}
+
+class man{
+    private String name;
+    private int age;
+
+    public man(){
+        System.out.println("进入man无参数默认构造器");
+    }
+    public man(int age){
+        this();   //用this调用构造器，系统识别出为无参数形式地构造器
+        setAge(age);
+        System.out.println("age="+this.age);
+    }
+    public man(int age, String name){
+        this(age);
+        setName(name);
+        System.out.println("name="+this.name);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+}
+
+输出结果：
+进入man无参数默认构造器
+..........
+进入man无参数默认构造器
+age=13
+..........
+进入man无参数默认构造器
+age=12
+name=liuzidi
+```
+
 ---
 
+#### 2.2.4.9 package关键字
 
+----
+
+1.为了更好地实现项目中类的管理，提供包的概念
+
+2.使用package声明类所在的包，声明在源文件的首行
+
+3.包，属于标识符，遵循标识符的命名规则（驼峰命名法），“见名知意“
+
+4.每 ” . "一层代表一层文件目录
+
+补充：同一个包下不能命名同类的接口和类，不同包下，可以明明同名的接口，类
+
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311202836001.png" alt="image-20210311202836001" style="zoom:80%;" />
+
+其中awt现在比较少用。
+
+---
+
+#### 2.2.4.10 MVC设计模式
+
+----
 

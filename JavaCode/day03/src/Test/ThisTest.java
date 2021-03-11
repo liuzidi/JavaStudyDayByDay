@@ -1,7 +1,5 @@
 package Test;
 
-import javax.xml.transform.stream.StreamSource;
-
 public class ThisTest {
     public static void main(String[]args){
         man man1= new man();
@@ -53,3 +51,5 @@ class man<main> {
 //sout 快捷键：System.out.println()
 //psvm 快捷键：public static void main(String[]args){}
 //fori 快捷键：for循环
+
+
