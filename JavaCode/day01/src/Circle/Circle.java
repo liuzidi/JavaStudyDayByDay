@@ -8,7 +8,7 @@ package Circle;
     }
 }
 
- class Circle {
+public class Circle {
 
         double radius;
         void findArea(){

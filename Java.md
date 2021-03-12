@@ -1409,4 +1409,24 @@ class test{
 
 ![image-20210311204949626](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311204949626.png)
 
-P240
+8.import static：导入指定类或接口的静态结构
+
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311205526919.png" alt="image-20210311205526919" style="zoom:80%;" />
+
+则可以省略为：
+
+<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311205606853.png" alt="image-20210311205606853" style="zoom: 80%;" />
+
+Eclipse的快捷键
+
+![image-20210312100903786](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210312100903786.png)
+
+![image-20210312100940612](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210312100940612.png)
+
+![image-20210312101003438](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210312101003438.png)
+
+#### 2.2.4.12 继承性
+
+---
+
+继承
