@@ -11,7 +11,7 @@ public class OverRideTest {
     }
 }
 //子类重写的权限修饰符不小于父类被重写的方法的权限修饰符
-class Person{
+protected class Person{
     int age;
     String name;
 
