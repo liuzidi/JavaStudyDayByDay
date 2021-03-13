@@ -1,4 +1,4 @@
-push困难解决方法：
+push困难三板斧：
 git config --global http.proxy
 git config --global --unset http.proxy
 git config --global https.proxy
@@ -9,6 +9,10 @@ git remote set-url <远程仓库名> http://.../xxx.git
 添加远程仓库地址
 git remote add origin http://.../xxx.git
 
-forsleep.cn服务器地址：
+设置代理地址：（PAC模式下）
+git config --global http.proxy 'http://127.0.0.1:18089'
+git config --global https.proxy 'http://127.0.0.1:18089'
+
+forsleep.cn服务器远程地址：
 47.102.36.95
 Llf2018!
