@@ -1614,3 +1614,48 @@ class Students extends Person{
 
 <img src="file://C:/Users/86173/AppData/Roaming/Typora/typora-user-images/image-20210311151937540.png?lastModify=1615632487" alt="image-20210311151937540" style="zoom:80%;" />
 
+---
+
+#### **2.2.4.13 super关键字**
+
+子类和父类的属性类型和属性名相同时，不会发生覆盖，而是用**this和super**来区分
+
+如果是方法，则称为重写。默认情况下为this。
+
+```java
+public class SuperTest {
+    public static void main (String [] args){
+        Students s= new Students ();
+        s.showId();//super id=Person, this id =Students
+    }
+}
+public class Person {
+    int age;
+    String name;
+    String id="Person";
+    public void eat(){
+        System.out.println("Person类的eat方法");
+    }
+    public void sleep(){
+        System.out.println("Person类中的sleep方法");
+    }
+}
+public class Students extends Person {
+    String id="Students";
+    public void eat(){
+        System.out.println("Students中的eat方法");
+    }
+    public void sleep(){
+        System.out.println("Students中的sleep方法");
+    }
+    public void study(){
+        System.out.println("Students中的study方法");
+    }
+    public void showId(){
+        System.out.println("super id="+super.id+", this id ="+this.id);
+    }
+}
+```
+
+this指针会在当前的对象类中寻找相应的属性，如果没找到，则在父类中寻找，而super会直接去父类中寻找，通常情况下省略this和super，但子类和父类的命名发生同名冲突时，需要特别说明下哪个类下的调用。
+

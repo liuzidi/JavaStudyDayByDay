@@ -1,6 +1,6 @@
 package OverRideTest;
 
-public class OverRideTest {
+public class OverRideTest extends Students {
     public static void main(String[]args){
         Person p =new Person();
         p.show();
@@ -11,7 +11,7 @@ public class OverRideTest {
     }
 }
 //子类重写的权限修饰符不小于父类被重写的方法的权限修饰符
-protected class Person{
+    class Person{
     int age;
     String name;
 
@@ -33,6 +33,7 @@ protected class Person{
     private void superPrivate(){
         System.out.println("这是父类Person的私有方法");
     }
+
     void superNo(){
         System.out.println("这是父类Person的缺省方法");
     }
