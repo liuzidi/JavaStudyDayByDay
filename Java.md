@@ -1659,9 +1659,77 @@ public class Students extends Person {
 
 this指针会在当前的对象类中寻找相应的属性，如果没找到，则在父类中寻找，而super会直接去父类中寻找，通常情况下省略this和super，但子类和父类的命名发生同名冲突时，需要特别说明下哪个类下的调用。
 
-super 调用构造器
+**super 调用构造器**
 
-可以通过子类构造器中supe关键字来调用父类的构造器private属性和方法：
+1.可以通过子类构造器中supe关键字来调用父类的构造器private属性和方法：（直接用super。属性的方式无法调用）
 
-事实上super（）是子类构造器默认调用的，可以省略。
+2.事实上super（）是子类构造器默认调用的，可以省略。**且super（形参）的使用必须声明在子类构造器的首行！！！**
+
+![image-20210315160034787](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210315160034787.png)
+
+3.类的构造器中。针对this（形参列表），super（形参列表）的只能二选一，不能同时出现，因为必须在首行，而首行只能有一个
+
+4.在类的多个构造器中，至少一个类的构造器使用了super（）这种形式，调用。
+
+```java
+public class SuperTest {
+    public static void main(String[] args){
+        Students s = new Students(18,"liuzidi");
+    }
+}
+
+ class Person {
+    private int age;
+    private String name;
+    public Person(int age){
+        this.age = age;
+        System.out.println("age="+this.age);
+    }
+    public Person(){
+        System.out.println("调用Person类默认构造器");
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+ class Students extends Person{
+    public Students (int age , String name){
+        super(age);
+        super.setName(name);
+    }
+    public Students(){
+//        super.age=1;
+        //子类无法用super. 属性的方式来调用父类private属性
+    }
+}
+```
+
+**子类对象实例化过程**
+
+1.结果上来看：
+
+​    子类继承父类以后，就获取了父类中声明的属性。
+
+​	创建子类的对象，在堆空间中，就会加载所有父类的属性。
+
+2.从过程上看：
+
+​	至少调用一次super构造器，至多调用（n-1）次构造器（n为构造器个数），当命名一个构造器时，该类中默认的无参数构造器会消失，无法调用，如果还需要无参数构造器，必须手写。
+
+​	
+
+
 
