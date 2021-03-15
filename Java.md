@@ -96,11 +96,11 @@ JDK：Java环境；里程碑式的版本：JDK 5.0，JDK8.0是5以后变化最�
 
 #### 2.2.2.3 Java体系平台
 
-![image-20201210194558221](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201210194558221.png)
+![image-20201210194558221](Java.assets\image-20201210194558221.png)
 
 JavaME和Java Card现在已经合并；（MP3等小型设备已经被淘汰）
 
-![image-20201210194934044](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201210194934044.png)
+![image-20201210194934044](Java.assets\image-20201210194934044.png)
 
 （Java的指针封装得很好，原理本质还是寻址指针）
 
@@ -108,9 +108,9 @@ JavaME和Java Card现在已经合并；（MP3等小型设备已经被淘汰）
 
 面向对象，健壮性，跨平台性（原理：安装虚拟机JVM：Java Virtual Machine）
 
-![image-20201210195349395](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201210195349395.png)
+![image-20201210195349395](Java.assets\image-20201210195349395.png)
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201210195551001.png" alt="image-20201210195551001" style="zoom:67%;" />
+<img src="Java.assets\image-20201210195551001.png" alt="image-20201210195551001" style="zoom:67%;" />
 
 #### 2.2.2.5 Java的环境
 
@@ -130,15 +130,15 @@ JRE（Java Runtime Environment）：Java运行环境，运行“Java文件只需
 
 ​	JRE=JVM+Java SE标准类库；	
 
-![image-20201210200641667](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201210200641667.png)
+![image-20201210200641667](Java.assets\image-20201210200641667.png)
 
 #### 2.2.2.6 Java的程序运行
 
-![image-20201211190632961](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211190632961.png)
+![image-20201211190632961](Java.assets\image-20201211190632961.png)
 
 javac运行代码txt后形成字节码文件，再用java进行运行；
 
-![image-20201211195140466](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211195140466.png)
+![image-20201211195140466](Java.assets\image-20201211195140466.png)
 
 总结：java文件可以声明多个类，但只能有一个public；
 
@@ -176,7 +176,7 @@ class helloworld{
 
 #### 2.2.2.8 Java API文档
 
-![image-20201211193650778](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211193650778.png)
+![image-20201211193650778](Java.assets\image-20201211193650778.png)
 
 API文档：相当于java说明书
 
@@ -194,13 +194,13 @@ System.out.println();//换行
 
 ##### 2.2.2.9.2 关键字
 
-![image-20201211201409655](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211201409655.png)
+![image-20201211201409655](Java.assets\image-20201211201409655.png)
 
-![image-20201211201451150](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211201451150.png)
+![image-20201211201451150](Java.assets\image-20201211201451150.png)
 
 ##### 2.2.2.9.3 保留字
 
-![image-20201211201550868](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211201550868.png)
+![image-20201211201550868](Java.assets\image-20201211201550868.png)
 
 ##### 2.2.2.9.4 标识符
 
@@ -216,7 +216,7 @@ System.out.println();//换行
 
 驼峰命名法；
 
-![image-20201211202144488](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201211202144488.png)
+![image-20201211202144488](Java.assets\image-20201211202144488.png)
 
 包名：全部小写；
 
@@ -344,21 +344,21 @@ s1++;//自增不改变本身变量的数据类型；
 int i1= i2 =3;//可以
 ```
 
-![image-20201216164838161](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216164838161.png)
+![image-20201216164838161](Java.assets\image-20201216164838161.png)
 
 +=和 普通的还是有区别的；不改变数据类型
 
-![image-20201216152905932](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216152905932.png)
+![image-20201216152905932](Java.assets\image-20201216152905932.png)
 
 练习：
 
-![image-20201216153047669](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216153047669.png)
+![image-20201216153047669](Java.assets\image-20201216153047669.png)
 
 
 
 可以通过 结果为0；
 
-![image-20201216153236448](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216153236448.png)
+![image-20201216153236448](Java.assets\image-20201216153236448.png)
 
 结果为32
 
@@ -368,7 +368,7 @@ int i1= i2 =3;//可以
 
 结果都是 boolean类型（区分好==和=的区别）
 
-![image-20201216153643236](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216153643236.png)
+![image-20201216153643236](Java.assets\image-20201216153643236.png)
 
 **instanceof**
 
@@ -376,22 +376,22 @@ int i1= i2 =3;//可以
 
 ###### 4. 逻辑运算符
 
-![image-20201216153857363](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216153857363.png)
+![image-20201216153857363](Java.assets\image-20201216153857363.png)
 
 短路和逻辑的区别：
-![image-20201216154347624](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216154347624.png)
+![image-20201216154347624](Java.assets\image-20201216154347624.png)
 
 当前情况没区别（因为存在前面是false的情况直接pass，短路会pass）
 
-![image-20201216154653327](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216154653327.png)
+![image-20201216154653327](Java.assets\image-20201216154653327.png)
 
-![image-20201216154820325](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216154820325.png)
+![image-20201216154820325](Java.assets\image-20201216154820325.png)
 
 开发中推荐是用短路；
 
 练习：
 
-![image-20201216155114463](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216155114463.png)
+![image-20201216155114463](Java.assets\image-20201216155114463.png)
 
 
 
@@ -399,63 +399,63 @@ int i1= i2 =3;//可以
 
 （一般不使用，看的懂就行）
 
-![image-20201216155426754](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216155426754.png)
+![image-20201216155426754](Java.assets\image-20201216155426754.png)
 
-![image-20201216160250095](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216160250095.png)
+![image-20201216160250095](Java.assets\image-20201216160250095.png)
 
 应用1：交换值：
 
-![image-20201216160836983](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216160836983.png)
+![image-20201216160836983](Java.assets\image-20201216160836983.png)
 
 
 
-![image-20201216160909798](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216160909798.png)
+![image-20201216160909798](Java.assets\image-20201216160909798.png)
 
 应用2：经典面试题
 
-![image-20201216165048486](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216165048486.png)
+![image-20201216165048486](Java.assets\image-20201216165048486.png)
 
 应用2：手动实现0-255转换为16进制
 
-**<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216165534408.png" alt="image-20201216165534408" style="zoom: 67%;" />
+**<img src="Java.assets\image-20201216165534408.png" alt="image-20201216165534408" style="zoom: 67%;" />
 
 ###### 6. 三元运算符
 
-![image-20201216161100862](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216161100862.png)
+![image-20201216161100862](Java.assets\image-20201216161100862.png)
 
 
 
-![image-20201216161241129](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216161241129.png)
+![image-20201216161241129](Java.assets\image-20201216161241129.png)
 
-![image-20201216161624814](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216161624814.png)
+![image-20201216161624814](Java.assets\image-20201216161624814.png)
 
 三元运算符可以嵌套
 
-![image-20201216161852756](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216161852756.png)
+![image-20201216161852756](Java.assets\image-20201216161852756.png)
 
 三元运算符与if-else的转换
 
-![image-20201216162436229](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216162436229.png)
+![image-20201216162436229](Java.assets\image-20201216162436229.png)
 
 运算符的优先级：
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216162546733.png" alt="image-20201216162546733" style="zoom: 80%;" />
+<img src="Java.assets\image-20201216162546733.png" alt="image-20201216162546733" style="zoom: 80%;" />
 
 #### 2.2.2.10 Java 流程控制
 
-![image-20201216163325874](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216163325874.png)
+![image-20201216163325874](Java.assets\image-20201216163325874.png)
 
- ![image-20201216163543163](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216163543163.png)
+ ![image-20201216163543163](Java.assets\image-20201216163543163.png)
 
 ##### 2.2.2.10.1 分支结构
 
 if-else运算方式
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216163729198.png" alt="image-20201216163729198" style="zoom: 50%;" />
+<img src="Java.assets\image-20201216163729198.png" alt="image-20201216163729198" style="zoom: 50%;" />
 
 从键盘导入包:采用Scanner类
 
-![image-20201216180200148](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216180200148.png)
+![image-20201216180200148](Java.assets\image-20201216180200148.png)
 
 ```java
 import java.util.Scanner;
@@ -475,9 +475,9 @@ class ScannerTest{
 }
 ```
 
-![image-20201216183137570](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216183137570.png)
+![image-20201216183137570](Java.assets\image-20201216183137570.png)
 
-![image-20201216183311288](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216183311288.png)
+![image-20201216183311288](Java.assets\image-20201216183311288.png)
 
 随机数的产生：
 
@@ -486,15 +486,15 @@ Math.random()          //[0.0,1.0]
     //公式 ：[a,b] :(int)(Math.random()*(b - a + 1 ) + a );
 ```
 
-![image-20201216183936209](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216183936209.png)
+![image-20201216183936209](Java.assets\image-20201216183936209.png)
 
 swtch-case
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216184802476.png" alt="image-20201216184802476" style="zoom:67%;" />
+<img src="Java.assets\image-20201216184802476.png" alt="image-20201216184802476" style="zoom:67%;" />
 
 switch结构中的表达式中：只能是以下六种数据类型：
 
-![image-20201216185101048](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216185101048.png)
+![image-20201216185101048](Java.assets\image-20201216185101048.png)
 
 **（不允许用boolean类型）**
 
@@ -502,27 +502,27 @@ case不允许有范围，即不能是boolean类型
 
 switch-case 和if-else的选择情况：
 
-![image-20201216190456765](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216190456765.png)
+![image-20201216190456765](Java.assets\image-20201216190456765.png)
 
 ##### 2.2.2.10.2 循环结构
 
 过程图示：
 
-![image-20201216190655021](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216190655021.png)
+![image-20201216190655021](Java.assets\image-20201216190655021.png)
 
 for循环
 
-![image-20201216190747648](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216190747648.png)
+![image-20201216190747648](Java.assets\image-20201216190747648.png)
 
 初始化和迭代条件可以很灵活“
 
-![image-20201216191109526](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216191109526.png)
+![image-20201216191109526](Java.assets\image-20201216191109526.png)
 
 while循环：
 
-![image-20201216194803898](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216194803898.png)
+![image-20201216194803898](Java.assets\image-20201216194803898.png)
 
-![image-20201216194740067](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216194740067.png)
+![image-20201216194740067](Java.assets\image-20201216194740067.png)
 
 切记：循环过程注意别漏了迭代条件，否则会陷入死循环
 
@@ -544,7 +544,7 @@ while (true){
 
 do-while循环
 
-![image-20201216195409667](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201216195409667.png)
+![image-20201216195409667](Java.assets\image-20201216195409667.png)
 
 do-while循环与其他循环体的小区别：至少会进行一次循环体
 
@@ -570,9 +570,9 @@ P121：质数输出
 
 数据结构与算法非常重要
 
-![image-20201217151648297](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201217151648297.png)
+![image-20201217151648297](Java.assets\image-20201217151648297.png)
 
-![image-20201217151731566](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201217151731566.png)
+![image-20201217151731566](Java.assets\image-20201217151731566.png)
 
 使用开方进行优化
 
@@ -580,7 +580,7 @@ P121：质数输出
 
 break 和continue 关键字的使用
 
-![image-20201217152034156](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201217152034156.png)
+![image-20201217152034156](Java.assets\image-20201217152034156.png)
 
 就近原则：跳出最近的循环；
 
@@ -600,7 +600,7 @@ return 结束一个方法；
 
 收支明细记录系统
 
-![image-20201217154101632](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201217154101632.png)
+![image-20201217154101632](Java.assets\image-20201217154101632.png)
 
 
 
@@ -618,7 +618,7 @@ main Alt+/
 
 sysomain Alt+/ 
 
-![image-20201229221530774](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201229221530774.png)
+![image-20201229221530774](Java.assets\image-20201229221530774.png)
 
 ----
 
@@ -688,7 +688,7 @@ int[] ids =new int[5];
 
 错误的初始化方式
 
-![image-20201229203452050](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201229203452050.png)
+![image-20201229203452050](Java.assets\image-20201229203452050.png)
 
 ---
 
@@ -750,11 +750,11 @@ Boolean类型默认B为false；
 
 ---
 
-![image-20201229205639738](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201229205639738.png)
+![image-20201229205639738](Java.assets\image-20201229205639738.png)
 
 
 
-![image-20201229210211302](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201229210211302.png)
+![image-20201229210211302](Java.assets\image-20201229210211302.png)
 
 只要有new字符，就会在堆中开辟新空间，并且在栈中生成一个记录地址的数组（类似指针引用），在初始化数组后如果让他重新开辟，会指向新开辟的堆空间对象，并且会将先前初始化好的堆空间当作垃圾在适当的时候释放；
 
@@ -774,7 +774,7 @@ Boolean类型默认B为false；
 
 ---
 
-![image-20201229214446731](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201229214446731.png)
+![image-20201229214446731](Java.assets\image-20201229214446731.png)
 
 ---
 
@@ -863,7 +863,7 @@ int [][]arr=new int [4][];
 
 ---
 
-![image-20201229220842962](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20201229220842962.png)
+![image-20201229220842962](Java.assets\image-20201229220842962.png)
 
 
 
@@ -893,13 +893,13 @@ int [][]arr=new int [4][];
 
 各排序算法的时间复杂度对比
 
-![image-20210201154825370](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210201154825370.png)
+![image-20210201154825370](Java.assets\image-20210201154825370.png)
 
 ---
 
 数组：Array工具类的使用
 
-![image-20210201223606110](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210201223606110.png)
+![image-20210201223606110](Java.assets\image-20210201223606110.png)
 
 ```java
 import java.util.Arrays;
@@ -962,7 +962,7 @@ person p2 = p1;//p1 p2指向同一块堆空间
 
 对象的创建
 
-![image-20210204115040026](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210204115040026.png)
+![image-20210204115040026](Java.assets\image-20210204115040026.png)
 
 #### 2.2.4.2 面向对象的三大特征
 
@@ -986,7 +986,7 @@ this super static final abstract interface package import
 
 栈空间（Stack）引用变量，局部变量
 
-![image-20210204115741456](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210204115741456.png)
+![image-20210204115741456](Java.assets\image-20210204115741456.png)
 
 #### 2.2.4.5 属性vs局部变量
 
@@ -1022,7 +1022,7 @@ this super static final abstract interface package import
 
 属性：根据其类型都有默认初始化值
 
-![image-20210204121016807](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210204121016807.png)
+![image-20210204121016807](Java.assets\image-20210204121016807.png)
 
 
 
@@ -1030,7 +1030,7 @@ this super static final abstract interface package import
 
 #### 2.2.4.6 Method
 
-![image-20210204122919347](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210204122919347.png)
+![image-20210204122919347](Java.assets\image-20210204122919347.png)
 
  不能在方法中建新的方法
 
@@ -1038,7 +1038,7 @@ this super static final abstract interface package import
 
 我们使用JVM的类的加载器和解释器对生成的字节码文件进行解释运行，这就意味着需要将字节码文件对应的类加载到内存中，涉及到内存解析
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210208140228837.png" alt="image-20210208140228837" style="zoom:80%;" />
+<img src="Java.assets\image-20210208140228837.png" alt="image-20210208140228837" style="zoom:80%;" />
 
 虚拟机栈：即栈，我们将局部变量存储到栈结构中
 
@@ -1092,7 +1092,7 @@ this super static final abstract interface package import
 ...<数据类型>
 ```
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210310182018586.png" alt="image-20210310182018586" style="zoom:80%;" />
+<img src="Java.assets\image-20210310182018586.png" alt="image-20210310182018586" style="zoom:80%;" />
 
 ```java
 public class MethodArgsTest {
@@ -1201,7 +1201,7 @@ getxxx方法有返回值，setxxx方法没有返回值；
 
 Java规定四种权限: private, 缺省， protected，public
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311151937540.png" alt="image-20210311151937540" style="zoom:80%;" />
+<img src="Java.assets\image-20210311151937540.png" alt="image-20210311151937540" style="zoom:80%;" />
 
 
 
@@ -1238,19 +1238,19 @@ class Person{
 
 **总结：属性赋值的先后顺序**
 
-   <img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311161034818.png" alt="image-20210311161034818" style="zoom:80%;" />
+   <img src="Java.assets\image-20210311161034818.png" alt="image-20210311161034818" style="zoom:80%;" />
 
 ---
 
 **拓展知识：JavaBean**
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311161159719.png" alt="image-20210311161159719" style="zoom: 67%;" />
+<img src="Java.assets\image-20210311161159719.png" alt="image-20210311161159719" style="zoom: 67%;" />
 
 ---
 
 拓展知识：UML类图
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311163357276.png" alt="image-20210311163357276" style="zoom: 50%;" />
+<img src="Java.assets\image-20210311163357276.png" alt="image-20210311163357276" style="zoom: 50%;" />
 
 
 
@@ -1349,7 +1349,7 @@ name=liuzidi
 
 补充：同一个包下不能命名同类的接口和类，不同包下，可以明明同名的接口，类
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311202836001.png" alt="image-20210311202836001" style="zoom:80%;" />
+<img src="Java.assets\image-20210311202836001.png" alt="image-20210311202836001" style="zoom:80%;" />
 
 其中awt现在比较少用。
 
@@ -1359,9 +1359,9 @@ name=liuzidi
 
 ----
 
-![image-20210311203149616](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311203149616.png)
+![image-20210311203149616](Java.assets\image-20210311203149616.png)
 
-![image-20210311203213438](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311203213438.png)
+![image-20210311203213438](Java.assets\image-20210311203213438.png)
 
 ---
 
@@ -1406,23 +1406,23 @@ class test{
 
 7.当源文件中，使用了不同包下的同名的类，则必须至少有一个全类名的方式显示
 
-![image-20210311204949626](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311204949626.png)
+![image-20210311204949626](Java.assets\image-20210311204949626.png)
 
 8.import static：导入指定类或接口的静态结构
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311205526919.png" alt="image-20210311205526919" style="zoom:80%;" />
+<img src="Java.assets\image-20210311205526919.png" alt="image-20210311205526919" style="zoom:80%;" />
 
 则可以省略为：
 
-<img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210311205606853.png" alt="image-20210311205606853" style="zoom: 80%;" />
+<img src="Java.assets\image-20210311205606853.png" alt="image-20210311205606853" style="zoom: 80%;" />
 
 Eclipse的快捷键
 
-![image-20210312100903786](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210312100903786.png)
+![image-20210312100903786](Java.assets\image-20210312100903786.png)
 
-![image-20210312100940612](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210312100940612.png)
+![image-20210312100940612](Java.assets\image-20210312100940612.png)
 
-![image-20210312101003438](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210312101003438.png)
+![image-20210312101003438](Java.assets\image-20210312101003438.png)
 
 #### 2.2.4.12 继承性
 
@@ -1665,7 +1665,7 @@ this指针会在当前的对象类中寻找相应的属性，如果没找到，�
 
 2.事实上super（）是子类构造器默认调用的，可以省略。**且super（形参）的使用必须声明在子类构造器的首行！！！**
 
-![image-20210315160034787](C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210315160034787.png)
+![image-20210315160034787](Java.assets\image-20210315160034787.png)
 
 3.类的构造器中。针对this（形参列表），super（形参列表）的只能二选一，不能同时出现，因为必须在首行，而首行只能有一个
 
@@ -1711,7 +1711,7 @@ public class SuperTest {
         super.setName(name);
     }
     public Students(){
-//        super.age=1;
+		//super.age = 1;
         //子类无法用super. 属性的方式来调用父类private属性
     }
 }
@@ -1729,7 +1729,9 @@ public class SuperTest {
 
 ​	至少调用一次super构造器，至多调用（n-1）次构造器（n为构造器个数），当命名一个构造器时，该类中默认的无参数构造器会消失，无法调用，如果还需要无参数构造器，必须手写。
 
-​	
+​	当我们通过子类的构造器创建子类对象时，我们一定会直接或间接地调用其父类的构造器，直到调用java.lang.Object类中的空参的构造器为止。正因为加载过所有父类的结构。之类的对象才可以考虑进行调用。
+
+​	<img src="Java.assets/image-20210315162748100.png" alt="image-20210315162748100" style="zoom:80%;" /
 
 
 
