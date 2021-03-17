@@ -1852,7 +1852,7 @@ java.lang.Object类
 
 3.Object类的属性和功能具有通用性；
 
-
+4.Object只定义了一个空参的构造器；
 
 Object类的方法介绍：
 
@@ -1860,5 +1860,26 @@ clone():创建并返回对象的copy；返回对象；
 
 equals（Object obj）：比较两个对象是否相等，返回boolean
 
-finalize（）；垃圾回收  
+finalize（）；垃圾回收  ，注：永远不要主动调用finalize方法，而是交给回收垃圾机制
 
+getClass():返回当前对象所在的类;
+
+toString();
+
+hashCode();
+
+wait();
+
+notify();
+
+notifyAll(); 
+
+---
+
+**== 和 equals的区别**
+
+---
+
+![image-20210317160852063](Java.assets/image-20210317160852063.png)
+
+![image-20210317180503910](Java.assets/image-20210317180503910.png)
