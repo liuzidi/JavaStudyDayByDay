@@ -1864,7 +1864,7 @@ finalize（）；垃圾回收  ，注：永远不要主动调用finalize方法�
 
 getClass():返回当前对象所在的类;
 
-toString();
+toString();转换为字符串
 
 hashCode();
 
@@ -1876,6 +1876,8 @@ notifyAll();
 
 ---
 
+##### 2.2.4.16.1 equals方法
+
 **== 和 equals的区别**
 
 ---
@@ -1883,3 +1885,160 @@ notifyAll();
 ![image-20210317160852063](Java.assets/image-20210317160852063.png)
 
 ![image-20210317180503910](Java.assets/image-20210317180503910.png)
+
+== 符号使用的时候必须保证两边类型相同，否则编译都不会通过；
+
+![image-20210318141000617](Java.assets/image-20210318141000617.png)
+
+重写之后，比较的不是两个引用的地址是否相同，而是比较“实体内容”是否相同；
+
+自定义类如果使用equals（）的话，也通常是比较两个对象的实体内容
+
+```java
+public class Test {
+    int age;
+    int grade;
+    public Test(int age,int grade){
+        this.age=age;
+        this.grade=grade;
+    }
+}
+class TestTestTest{
+    public static void main(String []args){
+        String str1= new String("ok");
+        String str2= new String("ok");
+        String str3 ="ok";
+        String str4  ="ok";
+        Test t1=new Test(1,2);
+        Test t2=new Test(1,2);
+        System.out.println("----------------");
+        System.out.println(str1==str2);//false
+        System.out.println(str1.equals(str2));//true
+        // (equals()对String引用变量进行了重写)
+        System.out.println(str1==str3);//false
+        System.out.println(str1.equals(str3));//true
+        System.out.println(str2==str3);//false
+        System.out.println(str2.equals(str3));//true
+        System.out.println(str3==str4);//true
+        // (只有不是通过new方式的，而是通过常量池的String才会true)
+        System.out.println(str3.equals(str4));//true
+        System.out.println(t1==t2);//false
+        System.out.println(t1.equals(t2));//false
+        //equals并未对Test类的equals方法进行重写
+    }
+}
+```
+
+对equals方法进行重写：
+
+```java
+public class Test2 {
+    int age;
+    int grade;
+    String name;
+
+    public Test2(int age, int grade, String name) {
+        this.age = age;
+        this.grade = grade;
+        this.name = name;
+    }
+   @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(o instanceof Test2){
+            return this.age==((Test2) o).age && this.grade==((Test2)o).grade && this.name.equals(((Test2)o).name);
+        }
+        return false;
+    }
+}
+    class TestTestTest{
+    public static void main(String []args){
+        Test2 t1=new Test2(1,2,"liuzidi");
+        Test2 t2=new Test2(1,2,"liuzidi");
+        System.out.println(t1==t2);//false
+        System.out.println(t1.equals(t2));//true
+        //equals对Test类的equals方法进行重写
+    }
+}
+```
+
+重写后euqals方法生效，并且对比实体内容；
+
+<img src="Java.assets/image-20210318160040689.png" alt="image-20210318160040689" style="zoom: 80%;" />
+
+---
+
+##### **2.2.4.16.1 toString方法**
+
+---
+
+1.当我们输出一个对象的引用时，实际上就是调用对象的toString方法
+
+2.Object中对toString的定义：
+
+```java
+public String toString() {
+    return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    // 类名 @ JVM中的地址哈希码
+}
+```
+
+3.像String，Date，File，包装类，都重写了toString方法。
+
+想要使用调用对象的toString方法，当调用此方法时，返回对象的实体内容；
+
+```java
+import java.util.Date;
+
+public class TestToString {
+    public static void main(String []args){
+        Person p1 =new Person();
+        System.out.println(p1.toString());//ObjectTest2.Person@7ef20235
+        System.out.println(p1);//ObjectTest2.Person@7ef20235
+
+        String str ="lzd";
+        System.out.println(str);//lzd
+
+        Date date =new Date(1132332L);
+        System.out.println(date);//Thu Jan 01 08:18:52 CST 1970
+    }
+}
+class Person{
+    int age;
+    String name;
+    public void eat(){
+        System.out.println("eat");
+    }
+}
+```
+
+---
+
+#### **2.2.4.17 包装类的使用**
+
+---
+
+单元测试：
+
+Java中的JUnit单元测试
+
+eclipse的操作方法：
+
+![image-20210318185547568](Java.assets/image-20210318185547568.png)
+
+如果执行结果没有任何异常，绿条；
+
+如果执行结果出现异常，红条；
+
+
+
+**包装类**（wrapper）
+
+<img src="Java.assets/image-20210318201528704.png" alt="image-20210318201528704" style="zoom:67%;" />
+
+让基本数据类型也具有类的特点；
+
+包装类就是针对八种基本数据类型定义相应的引用类型——包装类（封装类）
+
+![image-20210318202339439](Java.assets/image-20210318202339439.png)
+
