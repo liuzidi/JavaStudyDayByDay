@@ -5,7 +5,6 @@ import org.junit.Test;
 //包装类的测试
 //基本数据类型，包装类，String三者之间的转换
 public class WrapperTest {
-
     @Test
     /**
      * 基本类型转化为包装类：调用包装类的构造器（但已经过时）
@@ -52,12 +51,50 @@ public class WrapperTest {
         //int ---> Integer
         Integer in1 = 100 ;
         int numIn1 =in1.intValue();
-        System.out.println(numIn1);
+        System.out.println(numIn1);//100
 
         //float --> Float
         Float f1 = 12.3f;
         float numFloat1 =f1.floatValue();
-        System.out.println(numFloat1);
+        System.out.println(numFloat1);//12.3
+
+    }
+    @Test
+    /**
+     * JDK 5.0新特性 ：自动装箱和自动拆箱
+     *
+     */
+
+    public void test3(){
+        // 自动装箱 ：基本数据类型-->包装类
+        int num1 =100;
+        Integer in1 = num1;//自动装箱
+
+        boolean b1 =true;
+        Boolean b2 =b1;//自动装箱
+
+        //自动拆箱：包装类--->基本数据类型
+
+        int num2 =in1;//自动拆箱
+        boolean b3 = b2;//自动拆箱
+
+    }
+    @Test
+    /**
+     * 基本数据类型，包装类---> String类型
+     */
+    public void test4(){
+        int num1 =10;
+        //方式一：连接运算将基本数据类型转化为String类型
+        String str1 =num1 +"";
+        //方式二：调用String的valueOf（Xxx xxx）
+        float f1 =12.3f;
+        String str2 =String.valueOf(f1);//"12.3"
+
+        Double d1 =12.4d;
+        String str3 =String.valueOf(d1);
+        System.out.println(d1);
+        System.out.println(str3);
 
     }
 }

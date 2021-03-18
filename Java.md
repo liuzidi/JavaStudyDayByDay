@@ -964,7 +964,7 @@ person p2 = p1;//p1 p2指向同一块堆空间
 
 ![image-20210204115040026](Java.assets/image-20210204115040026.png)
 
-#### 2.2.4.2 面向对象的三大特征
+#### 2.2.4.2 面向对象三大特征
 
 ---
 
@@ -2018,7 +2018,7 @@ class Person{
 
 ---
 
-单元测试：
+**单元测试：**
 
 Java中的JUnit单元测试
 
@@ -2032,7 +2032,7 @@ eclipse的操作方法：
 
 
 
-**包装类**（wrapper）
+**包装类（wrapper）**
 
 <img src="Java.assets/image-20210318201528704.png" alt="image-20210318201528704" style="zoom:67%;" />
 
@@ -2041,4 +2041,65 @@ eclipse的操作方法：
 包装类就是针对八种基本数据类型定义相应的引用类型——包装类（封装类）
 
 ![image-20210318202617480](Java.assets/image-20210318202617480.png)
+
+```java
+/包装类的测试
+//基本数据类型，包装类，String三者之间的转换
+public class WrapperTest {
+    @Test
+    /**
+     * 基本类型转化为包装类：调用包装类的构造器（如：Integer()）（但最新版本中已经过时）
+     */
+    public void test1(){
+        int num =10;
+//      System.out.println(num.toString());
+//      基本数据类型无法进行相应的属性操作
+        Integer in = num;
+        System.out.println(in.toString());//10
+
+        //Integer
+        Integer in2 = Integer.valueOf("123");
+        System.out.println(in2);//123
+//      Integer in3 = new Integer("123bc");
+//      System.out.println(in3);
+//      必须纯数字，否则运行无法通过
+
+        //Float
+        Float f1 = 12.3f;
+        System.out.println(f1.toString());//12.3
+
+        Float f2 =Float.valueOf("12.3");
+        System.out.println(f2);//12.3
+
+        //Boolean
+        Boolean b1 =true;
+        System.out.println(b1);//true
+
+        Boolean b2 =Boolean.valueOf("true");
+        System.out.println(b2);//true
+
+        Boolean b3 =Boolean.valueOf("tRuE");
+        System.out.println(b3);//true 忽略大小写
+
+        Boolean b4 =Boolean.valueOf("true123");
+        System.out.println(b4);//false
+    }
+    @Test
+    /**
+     * 包装类转化为基本类型：调用包装类的xxxValue方法
+     */
+    public void test2(){
+        //int ---> Integer
+        Integer in1 = 100 ;
+        int numIn1 =in1.intValue();
+        System.out.println(numIn1);//100
+
+        //float --> Float
+        Float f1 = 12.3f;
+        float numFloat1 =f1.floatValue();
+        System.out.println(numFloat1);//12.30
+
+    }
+}
+```
 
