@@ -1612,7 +1612,7 @@ class Students extends Person{
 
 **权限修饰符：**
 
-<img src="file://C:/Users/86173/AppData/Roaming/Typora/typora-user-images/image-20210311151937540.png?lastModify=1615632487" alt="image-20210311151937540" style="zoom:80%;" />
+<img src="Java.assets/image-20210311151937540.png?lastModify=1615632487" alt="image-20210311151937540" style="zoom:80%;" />
 
 ---
 
@@ -1721,15 +1721,15 @@ public class SuperTest {
 
 1.结果上来看：
 
-​    子类继承父类以后，就获取了父类中声明的属性。
+子类继承父类以后，就获取了父类中声明的属性。
 
-​	创建子类的对象，在堆空间中，就会加载所有父类的属性。
+创建子类的对象，在堆空间中，就会加载所有父类的属性。
 
 2.从过程上看：
 
-​	至少调用一次super构造器，至多调用（n-1）次构造器（n为构造器个数），当命名一个构造器时，该类中默认的无参数构造器会消失，无法调用，如果还需要无参数构造器，必须手写。
+至少调用一次super构造器，至多调用（n-1）次构造器（n为构造器个数），当命名一个构造器时，该类中默认的无参数构造器会消失，无法调用，如果还需要无参数构造器，必须手写。
 
-​	当我们通过子类的构造器创建子类对象时，我们一定会直接或间接地调用其父类的构造器，直到调用java.lang.Object类中的空参的构造器为止。正因为加载过所有父类的结构。之类的对象才可以考虑进行调用。
+当我们通过子类的构造器创建子类对象时，我们一定会直接或间接地调用其父类的构造器，直到调用java.lang.Object类中的空参的构造器为止。正因为加载过所有父类的结构。之类的对象才可以考虑进行调用。
 
 ---
 
@@ -2179,6 +2179,79 @@ public class InterviewTest {
         }
         System.out.println(o2);//1
     }
+    @Test
+    public void test3(){
+        Integer i =new Integer(1);
+        Integer j =new Integer(1);
+        System.out.println(i==j);//false
+        //引用类型的==比较的是地址
+
+        Integer m= 1;
+        Integer n= 1;
+        System.out.println(m==n);//true
+
+        Integer x =128;
+        Integer y =128;
+        System.out.println(x==y);//false
+        /**
+         * 包装类中的Integer封装定义了Integer cache定义了Integer[],
+         * 该数组会保存-128到127的数字（因为常用）
+         * 如果数字来自其中，则直接取出来使用即可，如果超出范围，则new一个
+         */
+    }
 }
 ```
 
+---
+
+#### **2.2.4.18 static关键字使用**
+
+---
+
+<img src="Java.assets/image-20210319142811541.png" alt="image-20210319142811541" style="zoom:67%;" />
+
+static声明的变量不归哪个对象特有，而是类中所有对象共享的。  
+
+1. static :静态的
+2. static可以用来修饰：属性方法，代码块，内部类
+3. static修饰属性：静态变量（或类变量）
+   - 属性，按照是否使用static修饰，又分为：静态属性 vs非静态属性（实例变量）
+   - 实例变量：我们创建了类的多个对象，每个对象都独立的拥有一套类的非静态属性。当修改其中一个对象中的非静态属性时，不会导致其他对象中同样的属性值的修改。
+   - 静态变量：我们创建了类的多个对象，多个对象共享同一个静态变量，修改其中一个对象中的静态属性时，其他对象的属性值也会随之变化。  
+   - static修饰属性的其他说明：
+     - 静态变量随着类的加载而加载；
+     - 静态变量的加载要早于对象的创建；
+     - 由于类只会加载一次，则静态变量在内存中也会只存在一份，存在方法区的静态域中。
+   - 静态属性举例：System.out； Math.PI；
+
+```java
+public class StaticTest {
+    public static void main(String []args){
+        Chinese c1 =new Chinese();
+        Chinese c2 =new Chinese();
+        Chinese c3 =new Chinese();
+        Chinese.nation ="China";
+        System.out.println(c2.nation);//China
+    }
+}
+class Chinese{
+    int age;
+    String name;
+    static String nation;
+}
+```
+
+4. 用static修饰方法：
+   + 随着类的加载而加载，可以通过“类.静态方法”进行调用；
+   + 当然也可以通过创建对象再调用方法进行调用；
+   + 静态方法中只能调用静态的方法和属性，非静态方法中既可以调用非静态的方法或属性，也可以调用静态的方法或属性。（不在同一个生命周期）(不能调用this.静态，只能用类.静态)
+5. static注意点：
+   + 
+
+   再静态的方法中
+
+
+
+**static的内存分析：**
+
+![image-20210319154841385](Java.assets/image-20210319154841385.png)
