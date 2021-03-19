@@ -2100,6 +2100,85 @@ public class WrapperTest {
         System.out.println(numFloat1);//12.30
 
     }
+    @Test
+    /**
+     * JDK 5.0新特性 ：自动装箱和自动拆箱
+     *
+     */
+
+    public void test3(){
+        // 自动装箱 ：基本数据类型-->包装类
+        int num1 =100;
+        Integer in1 = num1;//自动装箱
+
+        boolean b1 =true;
+        Boolean b2 =b1;//自动装箱
+
+        //自动拆箱：包装类--->基本数据类型
+
+        int num2 =in1;//自动拆箱
+        boolean b3 = b2;//自动拆箱
+
+    }
+    @Test
+    /**
+     * 基本数据类型，包装类---> String类型
+     */
+    public void test4(){
+        int num1 =10;
+        //方式一：连接运算将基本数据类型转化为String类型
+        String str1 =num1 +"";
+        //方式二：调用String的valueOf（Xxx xxx）
+        float f1 =12.3f;
+        String str2 =String.valueOf(f1);//"12.3"
+
+        Double d1 =12.4d;
+        String str3 =String.valueOf(d1);
+        System.out.println(d1);//12.4
+        System.out.println(str3);//12.4
+    }
+    @Test
+    /**
+     *String类型---->基本数据类型，包装类，调用包装类的parseXxx（）
+     */
+    public void test5(){
+        String str1 = "123";
+//        int num =(int)str1;
+//        Integer in1 =(Integer)str1;  注：编译不通过，强转类型必须至少要有父子类关系
+        int num2 = Integer.parseInt(str1);
+        double num3 = Double.parseDouble(str1);
+        System.out.println("num2="+num2+",num3="+num3);//num2=123,num3=123.0
+
+        String str2 ="TrUe";
+        boolean b1 =Boolean.parseBoolean(str2);
+        String str3 ="true2";
+        boolean b2 =Boolean.parseBoolean(str3);
+        System.out.println("b1="+b1+",b2="+b2);//b1=true,b2=false
+    }
+}
+```
+
+易错编程题：
+
+```java
+public class InterviewTest {
+    @Test
+    public void test1(){
+        Object o1 =true? 1 :2.0;
+        System.out.println(o1);//1.0
+        //编译器会优先转化为最高精度的数字表达方式，三元运算符需要统一前后类型
+    }
+     @Test
+    public void test2(){
+        Object o2;
+        if(true){
+            o2 = new Integer(1);
+        }
+        else{
+            o2 =new Double(2.0);
+        }
+        System.out.println(o2);//1
+    }
 }
 ```
 

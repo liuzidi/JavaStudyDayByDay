@@ -93,8 +93,25 @@ public class WrapperTest {
 
         Double d1 =12.4d;
         String str3 =String.valueOf(d1);
-        System.out.println(d1);
-        System.out.println(str3);
+        System.out.println(d1);//12.4
+        System.out.println(str3);//12.4
+    }
+    @Test
+    /**
+     *String类型---->基本数据类型，包装类，调用包装类的parseXxx（）
+     */
+    public void test5(){
+        String str1 = "123";
+//        int num =(int)str1;
+//        Integer in1 =(Integer)str1;  注：编译不通过，强转类型必须至少要有父子类关系
+        int num2 = Integer.parseInt(str1);
+        double num3 = Double.parseDouble(str1);
+        System.out.println("num2="+num2+",num3="+num3);//num2=123,num3=123.0
 
+        String str2 ="TrUe";
+        boolean b1 =Boolean.parseBoolean(str2);
+        String str3 ="true2";
+        boolean b2 =Boolean.parseBoolean(str3);
+        System.out.println("b1="+b1+",b2="+b2);//b1=true,b2=false
     }
 }
