@@ -9,6 +9,7 @@ public class StaticTest {
         System.out.println(c2.nation);
     }
 }
+
 class Chinese{
     int age;
     String name;

@@ -2277,3 +2277,6 @@ class Chinese{
 **单例设计模式：**
 
 ![image-20210319161446767](Java.assets/image-20210319161446767.png)
+
+P324
+
