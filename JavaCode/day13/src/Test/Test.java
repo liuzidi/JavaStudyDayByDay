@@ -1,12 +1,7 @@
 package Test;
 
 public class Test {
-    public static void main(String []args){
-//        Leaf.age=3;//加载类时，会从最顶端的父类的静态代码块到当前类的静态代码块全部执行
-        System.out.println("--------------");
-        Leaf l= new Leaf();
 
-    }
 }
 
 class Root{
@@ -47,4 +42,10 @@ class Leaf extends Mid{
     }
     static int age ;
 
+    public static void main(String []args){
+//        Leaf.age=3;//加载类时，会从最顶端的父类的静态代码块到当前类的静态代码块全部执行
+        System.out.println("--------------");
+        Leaf l= new Leaf();
+
+    }
 }
