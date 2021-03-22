@@ -2458,8 +2458,6 @@ final:
    >
    > final修饰局部变量：方法体内赋值，形参中赋值赋final属性，（表明此形参是个常量，当我们调用这个方法时，给常量形参赋值，并在方法体内无法进行再赋值）
 
-#### 
-
 #### **2.2.4.21 抽象类与抽象方法**
 
 ![image-20210321151720781](Java.assets/image-20210321151720781.png)
@@ -2482,6 +2480,64 @@ final:
 2. 包括抽象方法的类，一定是抽象类，反之，抽象类中可以没有抽象方法的；
 3. 若子类重写了父类的所有抽象方法后，子类方可以实例化，若子类没有重写父类中所有的抽象方法，则子类也是抽象类，子类也需要abstract修饰；
 
+**abstract使用的注意点：**
 
+1. abstract不能修饰，属性，构造器等结构；
+2. abstract不能修饰私有方法（无法重写），静态方法（无法被覆盖），final方法，final的类
 
-P344
+```java
+public class Test {
+    public static void main(String [] args){
+//      B b =new B();//abstract 类不能实例对象
+        C c =new C();
+        c.eat();
+        System.out.println("--------");
+        D d =new D();
+        d.eat();
+        /**
+         * A is constructing
+         * C is constructing
+         * C is eating
+         * --------
+         * A is constructing
+         * B is constructing
+         * D is constructing
+         * B is eating
+         */
+    }
+
+}
+abstract class A{
+    A(){
+        System.out.println("A is constructing");
+    }
+    public abstract  void  eat();
+
+}
+
+abstract class B extends A{
+    B(){
+        System.out.println("B is constructing");
+    }
+    public void eat(){
+        System.out.println("B is eating");
+    }
+
+}
+
+class C extends A{
+    C(){
+        System.out.println("C is constructing");
+    }
+    public void eat(){
+        System.out.println("C is eating");
+    }
+
+}
+class D extends B{
+    D(){
+        System.out.println("D is constructing");
+    }
+}
+```
+
