@@ -1,4 +1,8 @@
-# **Java**
+# **Java学习总结笔记**
+
+***Author：liuzidi***
+
+***Location：ZheJiang University***
 
 
 
@@ -170,13 +174,13 @@ class helloworld{
 
 */
 
-然后再cmd中代码目录中javadoc -d 文件名 -version 注释文档名.java
+然后再cmd中代码目录中javadoc -d 文件名 -version 注释文档名.Java
 
 #### 2.2.2.8 Java API文档
 
 ![image-20201211193650778](Java.assets/image-20201211193650778.png)
 
-API文档：相当于java说明书
+API文档：相当于Java说明书
 
 下载网址：http：//www.oracle.com/technetwork/java/javase/downloads/index.html
 
@@ -1614,7 +1618,7 @@ class Students extends Person{
 
 ---
 
-#### **2.2.4.13 super关键字**
+#### 2.2.4.13 super关键字
 
 子类和父类的属性类型和属性名相同时，不会发生覆盖，而是用**this和super**来区分
 
@@ -1731,7 +1735,7 @@ public class SuperTest {
 
 ---
 
-#### **2.2.4.14 多态性**
+#### 2.2.4.14 多态性
 
 ---
 
@@ -1791,7 +1795,7 @@ public class SuperTest {
 
 ---
 
-#### **2.2.4.15 instanceof关键字**
+#### 2.2.4.15 instanceof关键字
 
 ---
 
@@ -1834,7 +1838,7 @@ a instanceof A //:判断对象a是否是类A的实例，如果是，返回true�
 
 ---
 
-#### **2.2.4.16 Object类**
+#### 2.2.4.16 Object类
 
 ---
 
@@ -2012,7 +2016,7 @@ class Person{
 
 ---
 
-#### **2.2.4.17 包装类的使用**
+#### 2.2.4.17 包装类的使用
 
 ---
 
@@ -2202,7 +2206,7 @@ public class InterviewTest {
 
 ---
 
-#### **2.2.4.18 static关键字使用**
+#### 2.2.4.18 static关键字使用
 
 ---
 
@@ -2311,7 +2315,7 @@ class Chinese{
 
 ---
 
-#### **2.2.4.19 代码块**
+#### 2.2.4.19 代码块
 
 ---
 
@@ -2436,7 +2440,7 @@ class Leaf extends Mid{
 
 ---
 
-#### **2.2.4.20 final关键字**
+#### 2.2.4.20 final关键字
 
 ---
 
@@ -2458,7 +2462,7 @@ final:
    >
    > final修饰局部变量：方法体内赋值，形参中赋值赋final属性，（表明此形参是个常量，当我们调用这个方法时，给常量形参赋值，并在方法体内无法进行再赋值）
 
-#### **2.2.4.21 抽象类与抽象方法**
+#### 2.2.4.21 抽象类与抽象方法
 
 ![image-20210321151720781](Java.assets/image-20210321151720781.png)
 
@@ -2540,4 +2544,273 @@ class D extends B{
     }
 }
 ```
+
+**abstract匿名子类对象**
+
+```java
+public class Test {
+    public static void main(String []args){
+        showEat(new Person());//非匿名类的匿名对象
+
+        Person p1 =new Person();
+        showEat(p1);//非匿名类的非匿名对象：名字为p1
+
+        //创建了一个匿名子类的对象 p：只能在抽象类进行抽象类的重写,重写但不调用
+        Worker w= new Worker(){
+            public void testMethod(){
+                System.out.println("worker");
+            }
+        };
+    }
+    public static void showEat(Person p){
+        p.eat();
+    }
+}
+
+class Person{
+    int age;
+    String name;
+    public void eat(){
+        System.out.println("Person eat");
+    }
+}
+ abstract class Worker{
+    public abstract void testMethod();
+ }
+```
+
+**多态的应用**
+
+<img src="Java.assets/image-20210323125918756.png" alt="image-20210323125918756" style="zoom:67%;" />
+
+---
+
+#### 2.2.4.22 接口
+
+---
+
+
+
+<img src="Java.assets/image-20210323133251357.png" alt="image-20210323133251357" style="zoom:67%;" />
+
+
+
+接口和类是并列的结构；
+
+**接口的历史**
+
+JDK7及以前：只能定义全局变量和抽象方法
+
+> 全局常量：public static final的
+>
+> 抽象方法：public abstract的
+
+JDK8：除了定义全局常量和抽象方法之外，还可以定义静态方法，默认方法等
+
+**接口的使用注意：**
+
+1. 接口中不能定义构造器！意味着接口不可以直接实例化；
+
+2. Java开发中，接口通过让类来实现；
+
+3. 如果Java中的类实现了接口中所有的抽象方法，则可以进行实例化，如果没有完全包括了接口中所有的抽象方法，则仍为抽象类；
+4. Java可以实现多个接口，弥补了Java的单继承性的局限性,格式如下：
+
+```java
+ class AA extends BB implements CC, DD,EE
+```
+
+5. 接口与接口之间可以继承，且可以多继承；
+6. 接口的具体使用，体现了多态性；
+7. 接口的实质是一种标准，规范；接口的实现类的集合是驱动；
+
+**抽象类和接口的异同：**
+
+**接口的应用：代理模式（Proxy）**
+
+![image-20210323145259352](Java.assets/image-20210323145259352.png)
+
+![image-20210323145946950](Java.assets/image-20210323145946950.png)
+
+**接口的应用：工厂模式：**
+
+<img src="Java.assets/image-20210323150153361.png" alt="image-20210323150153361" style="zoom: 80%;" />
+
+1. **Java中JDK8的接口新特性：**
+
+   <img src="C:\Users\86173\AppData\Roaming\Typora\typora-user-images\image-20210323152919280.png" alt="image-20210323152919280" style="zoom:67%;" />
+
+   1. 除了定义全局变量和抽象方法之外，还可以定义静态方法，默认方法；
+
+   2. 接口定义的静态方法，只能通过接口来调用，不能通过实现类来调用；
+
+      ```java
+      interface InterfaceTestTestA{
+          //静态方法
+          public static void method1(){
+              System.out.println("A1");
+          }
+          //默认方法:public 关键字可以省略
+          public default void method2(){
+              System.out.println("A2");
+          }
+          default void method3(){
+              System.out.println("A3");
+          }
+      }
+      class Subclass implements InterfaceTestTestA{
+         
+      }
+      public class TestTest{
+          public static void main(String[] args) {
+              Subclass s =new Subclass();
+              InterfaceTestTestA.method1();//OK 打印A1
+              //s.method1(); 报错，不能用实现类调用接口中的静态方法
+              //subClass.method1(); 报错，不能用实现类调用接口中的静态方法
+          }
+      }
+      ```
+
+   3. 通过实现类的对象，可以调用接口的默认方法；
+
+      ```java
+      interface InterfaceTestTestA{
+         static void method1(){
+              System.out.println("A1");
+          } 
+          default void method2(){
+              System.out.println("A2");
+          }
+      }
+      class Subclass implements InterfaceTestTestA{
+         
+      }
+      public class TestTest{
+          public static void main(String[] args) {
+              Subclass s =new Subclass();
+              s.method2();//实现接口的default方法
+          }
+      }
+      ```
+
+   4. 如果实现类重写了接口的默认方法，调用时，调用的是重写以后的方法；
+
+      ```java
+      interface InterfaceTestTestA{
+          public static void method1(){
+              System.out.println("A1");
+          }
+          public default void method2(){
+              System.out.println("A2");
+          }
+      }
+      class Subclass implements InterfaceTestTestA{
+          @Override
+          public void method2() {
+              System.out.println("subclass 2");
+          }
+      }
+      public class TestTest{
+          public static void main(String[] args) {
+              Subclass s =new Subclass();
+              s.method2();//subclass 2
+          }
+      }
+      ```
+
+   5. 如果子类（或实现类）继承的父类和实现的接口中声明了同名同参数的默认方法，那么子类在没有重写此方法的情况下，默认调用的是父类中的同名同参数的方法-->类优先原则； 
+
+      ```java
+      interface InterfaceTestTestA{
+          public static void method1(){
+              System.out.println("Interface 1");
+          }
+          public default void method2(){
+              System.out.println("Interface 2");
+          }
+      }
+      
+      class SuperClass{
+          public void method2(){
+              System.out.println("SuperClass 2");
+          }
+      
+      }
+      class SubClass extends SuperClass implements InterfaceTestTestA{
+      
+      }
+      public class TestTest{
+          public static void main(String[] args) {
+              SubClass s =new SubClass();
+              s.method2();//SuperClass 2 优先调用父类而不是接口
+      
+          }
+      }
+      ```
+
+   6. 如果实现类实现了多个接口，而多个接口定义了同名同参数的默认方法，那么实现类没有重写该方法的情况下，报错--->接口冲突，这就需要我们必须在实现类中重写此方法；
+
+      ```java
+      interface InterfaceTestTestA{
+          public static void method1(){
+              System.out.println("A1");
+          }
+          public default void method2(){
+              System.out.println("A2");
+          }
+      }
+      interface InterfaceTestTestB{
+          static void method1(){
+              System.out.println("B1");
+          }
+          default void method2(){
+              System.out.println("B2");
+          }
+      }
+      class Subclass implements InterfaceTestTestA,InterfaceTestTestB{
+      //接口冲突，两个接口都有method2()方法，必须重写
+          @Override
+          public void method2() {
+              System.out.println("subclass 2");
+          }
+      }
+      public class TestTest{
+          public static void main(String[] args) {
+              Subclass s =new Subclass();
+              s.method2();//subclass 2
+          }
+      }
+      ```
+
+   7. 如何在子类（或实现类）的方法中调用父类接口中被重写的方法：调用super关键字；
+
+      ```java
+      interface InterfaceTestTestA{
+          public static void method1(){
+              System.out.println("Interface 1");
+          }
+          public default void method2(){
+              System.out.println("Interface 2");
+          }
+      }
+      
+      class SuperClass  {
+          public void method2(){
+              System.out.println("SuperClass 2");
+          }
+      }
+      class SubClass extends SuperClass implements InterfaceTestTestA{
+          public void myMethod(){
+              method2();//调用自己定义的重写的方法
+              super.method2();//调用的是父类中声明
+              InterfaceTestTestA.super.method2();//调用接口中的默认方法
+          }
+      }
+      public class TestTest{
+          public static void main(String[] args) {
+              SubClass s =new SubClass();
+              s.myMethod();
+          }
+      }
+      ```
 

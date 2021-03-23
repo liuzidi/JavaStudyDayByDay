@@ -33,10 +33,6 @@ abstract class B extends A{
     B(){
         System.out.println("B is constructing");
     }
-    public void eat(){
-        System.out.println("B is eating");
-    }
-
 }
 
 class C extends A{
@@ -51,5 +47,8 @@ class C extends A{
 class D extends B{
     D(){
         System.out.println("D is constructing");
+    }
+    public void eat(){
+        System.out.println("D is eating");
     }
 }
