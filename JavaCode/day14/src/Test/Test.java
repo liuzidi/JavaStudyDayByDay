@@ -42,7 +42,6 @@ class C extends A{
     public void eat(){
         System.out.println("C is eating");
     }
-
 }
 class D extends B{
     D(){

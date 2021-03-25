@@ -2,6 +2,7 @@ package Test;
 
 public class Test {
     public void method(){
+
         int num =2;
         class AA{
             public void show(){
