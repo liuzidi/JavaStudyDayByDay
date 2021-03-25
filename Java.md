@@ -2873,3 +2873,6 @@ public class Test {
 
 ---
 
+生命周期：
+
+![image-20210325194507519](Java.assets/image-20210325194507519.png)

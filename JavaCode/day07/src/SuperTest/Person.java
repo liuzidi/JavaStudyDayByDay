@@ -10,8 +10,6 @@ public class Person {
     public Person(){
         System.out.println("调用Person类默认构造器");
     }
-
-
     public void setAge(int age) {
         this.age = age;
     }
