@@ -1,5 +1,4 @@
 package BankTest;
-
 /**
  * @author:liuzidi
  * @Description:
@@ -16,6 +15,7 @@ public class BankTest {
         t1.start();
         t2.start();
         t3.start();
+        
     }
 }
 class Bank{

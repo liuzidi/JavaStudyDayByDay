@@ -12,6 +12,7 @@ public class ThreadDeathTest {
 /**
  * s1 和 s2 可能发生死锁，都在等待对方放弃自己需要的同步资源不放弃，形成了线程的死锁
  */
+
         new Thread(){
             @Override
             public void run() {
@@ -32,7 +33,6 @@ public class ThreadDeathTest {
                 }
             }
         }.start();
-
         new Thread(new Runnable() {
             @Override
             public void run() {

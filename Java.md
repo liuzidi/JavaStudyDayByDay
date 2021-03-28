@@ -2988,3 +2988,8 @@ notify释放wait
 
 ![image-20210326142756125](Java.assets/image-20210326142756125.png)
 
+
+
+**线程创建方式：**
+
+1.callable接口
