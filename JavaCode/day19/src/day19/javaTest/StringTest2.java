@@ -6,4 +6,7 @@ package day19.javaTest;
  * @Description:
  */
 public class StringTest2 {
+    public void jk(){
+        System.out.println("11");
+    }
 }
