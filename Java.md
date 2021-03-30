@@ -2993,3 +2993,5 @@ notify释放wait
 **线程创建方式：**
 
 1.callable接口
+
+P498
