@@ -1,16 +1,17 @@
 package day20.java.test;
 
-
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+
 
 /**
  * @author:liuzidi
  * @Description:
  */
+
+
 public class SeasonTestTestTest  {
     @Test
     public void test1(){
@@ -23,13 +24,12 @@ public class SeasonTestTestTest  {
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
-
     }
 }
+
 class Person {
     private int age;
     private String name;
-
     public Person() {
     }
 
