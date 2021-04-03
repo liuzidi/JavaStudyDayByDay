@@ -25,7 +25,10 @@ public class MapTest {
         System.out.println(map == null);
         System.out.println(map.size());
     }
+    @Test
+    public void test2(){
 
+    }
 }
 class Person{
     public static int age =10;

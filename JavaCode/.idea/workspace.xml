@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b452b3-c0fb-4462-a90e-e6fa0ebea0db" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/day21/day21.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day21/src/day21/JavaTest/MapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Java.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day21/src/day21/JavaTest/MapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/day21/src/day21/JavaTest/MapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <recent name="day20.java.test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MapTest.test1">
+  <component name="RunManager" selected="JUnit.GenericTest.test1">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -81,6 +79,22 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenericTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day21" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day21.JavaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day21.JavaTest" />
+      <option name="MAIN_CLASS_NAME" value="day21.JavaTest.GenericTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GenericTest.test1" />
         <item itemvalue="JUnit.MapTest.test1" />
         <item itemvalue="JUnit.SeasonTestTestTest.test1" />
       </list>
@@ -136,7 +151,7 @@
       <workItem from="1617115808319" duration="1823000" />
       <workItem from="1617175601378" duration="17007000" />
       <workItem from="1617341016559" duration="717000" />
-      <workItem from="1617348164422" duration="2568000" />
+      <workItem from="1617348164422" duration="9857000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617100590384</created>
@@ -166,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617341136981</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit">
+      <created>1617351546293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617351546293</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
