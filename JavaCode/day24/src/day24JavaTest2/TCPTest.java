@@ -3,10 +3,7 @@ package day24JavaTest2;
 import org.junit.Test;
 
 import java.io.*;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-
+import java.net.*;
 /**
  * @author:liuzidi
  * @Description:
@@ -21,7 +18,7 @@ public class TCPTest {
             InetAddress inet =InetAddress.getByName("127.0.0.1");
             socket =new Socket(inet,8899);
             os= socket.getOutputStream();
-            os.write("你好，服务器，我是客户端".getBytes());
+            os.write("你好，服务器，我是客户端2".getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -58,7 +55,7 @@ public class TCPTest {
             while((len =is.read(buffer)) != -1){
                 baos.write(buffer,0,len);
             }
-            System.out.println(baos.toString());
+            System.out.println(baos.toString()+" 来自服务器端");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
