@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37b452b3-c0fb-4462-a90e-e6fa0ebea0db" name="Default Changelist" comment="commit" />
+    <list default="true" id="37b452b3-c0fb-4462-a90e-e6fa0ebea0db" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day24/day24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/day24/day24.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day24/src/day24JavaTest/day24Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/day24/src/day24JavaTest/day24Test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +71,7 @@
       <recent name="day20.java.test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ObjectInputOutputStreamTest.test2">
+  <component name="RunManager" selected="JUnit.day24Test.test2">
     <configuration name="OrderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day22.javaTest.OrderTest" />
       <module name="day22" />
@@ -90,38 +94,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GenericTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day21" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day21.JavaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="day21.JavaTest" />
-      <option name="MAIN_CLASS_NAME" value="day21.JavaTest.GenericTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day21" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day21.JavaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="day21.JavaTest" />
-      <option name="MAIN_CLASS_NAME" value="day21.JavaTest.MapTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,13 +130,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="day24Test.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day24JavaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day24JavaTest" />
+      <option name="MAIN_CLASS_NAME" value="day24JavaTest.day24Test" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day24Test.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day24JavaTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day24JavaTest" />
+      <option name="MAIN_CLASS_NAME" value="day24JavaTest.day24Test" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.day24Test.test2" />
+        <item itemvalue="JUnit.day24Test.test1" />
         <item itemvalue="JUnit.ObjectInputOutputStreamTest.test2" />
         <item itemvalue="JUnit.ObjectInputOutputStreamTest.test1" />
         <item itemvalue="Application.OrderTest" />
-        <item itemvalue="JUnit.GenericTest.test1" />
-        <item itemvalue="JUnit.MapTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +185,7 @@
       <workItem from="1617175601378" duration="17007000" />
       <workItem from="1617341016559" duration="717000" />
       <workItem from="1617348164422" duration="20272000" />
+      <workItem from="1617599971066" duration="1483000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617100590384</created>
@@ -252,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617517377623</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="commit">
+      <created>1617600149546</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617600149546</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
