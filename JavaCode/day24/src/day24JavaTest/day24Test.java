@@ -30,8 +30,6 @@ public class day24Test {
             }
         }
     }
-
-
     @Test
     public  void test2() {
         ObjectInputStream ois =null;
@@ -61,7 +59,6 @@ class Person implements Serializable {
         this.age=age;
         this.name =name;
     }
-
     @Override
     public String toString() {
         return "Person{" +

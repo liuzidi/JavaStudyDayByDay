@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="37b452b3-c0fb-4462-a90e-e6fa0ebea0db" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24/day24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/day24/day24.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day24/src/day24JavaTest/day24Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/day24/src/day24JavaTest/day24Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -71,20 +70,7 @@
       <recent name="day20.java.test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.day24Test.test2">
-    <configuration name="OrderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day22.javaTest.OrderTest" />
-      <module name="day22" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day22.javaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TCPTest.client">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -94,22 +80,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ObjectInputOutputStreamTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day23" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day23JavaTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="day23JavaTest" />
-      <option name="MAIN_CLASS_NAME" value="day23JavaTest.ObjectInputOutputStreamTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,6 +95,38 @@
       <option name="PACKAGE_NAME" value="day23JavaTest" />
       <option name="MAIN_CLASS_NAME" value="day23JavaTest.ObjectInputOutputStreamTest" />
       <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPTest.client" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day24JavaTest2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day24JavaTest2" />
+      <option name="MAIN_CLASS_NAME" value="day24JavaTest2.TCPTest" />
+      <option name="METHOD_NAME" value="client" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPTest.server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day24JavaTest2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day24JavaTest2" />
+      <option name="MAIN_CLASS_NAME" value="day24JavaTest2.TCPTest" />
+      <option name="METHOD_NAME" value="server" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TCPTest.client" />
+        <item itemvalue="JUnit.TCPTest.server" />
         <item itemvalue="JUnit.day24Test.test2" />
         <item itemvalue="JUnit.day24Test.test1" />
         <item itemvalue="JUnit.ObjectInputOutputStreamTest.test2" />
-        <item itemvalue="JUnit.ObjectInputOutputStreamTest.test1" />
-        <item itemvalue="Application.OrderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +187,7 @@
       <workItem from="1617175601378" duration="17007000" />
       <workItem from="1617341016559" duration="717000" />
       <workItem from="1617348164422" duration="20272000" />
-      <workItem from="1617599971066" duration="1483000" />
+      <workItem from="1617599971066" duration="7750000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617100590384</created>
@@ -264,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617600149546</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit">
+      <created>1617601515776</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617601515776</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,5 +298,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JavaCode$day24Test_test2.ic" NAME="day24Test.test2 Coverage Results" MODIFIED="1617602545608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>day24JavaTest.*</FILTER>
+    </SUITE>
   </component>
 </project>
