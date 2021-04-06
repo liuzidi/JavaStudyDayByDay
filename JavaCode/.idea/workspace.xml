@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="37b452b3-c0fb-4462-a90e-e6fa0ebea0db" name="Default Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day24/src/day24JavaTest2/TCPTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/day24/src/day24JavaTest2/TCPTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day24/day24JavaTest2/TCPTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day24/day24JavaTest2/TCPTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +186,7 @@
       <workItem from="1617175601378" duration="17007000" />
       <workItem from="1617341016559" duration="717000" />
       <workItem from="1617348164422" duration="20272000" />
-      <workItem from="1617599971066" duration="11310000" />
+      <workItem from="1617599971066" duration="12713000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617100590384</created>
@@ -281,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617623995936</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit">
+      <created>1617633799687</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617633799687</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
