@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b452b3-c0fb-4462-a90e-e6fa0ebea0db" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Java.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +70,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TCPTest.client">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ObjectInputOutputStreamTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="day23" />
       <extension name="coverage">
@@ -187,6 +174,7 @@
       <workItem from="1617341016559" duration="717000" />
       <workItem from="1617348164422" duration="20272000" />
       <workItem from="1617599971066" duration="13704000" />
+      <workItem from="1617800458300" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1617100590384</created>

@@ -254,7 +254,6 @@ String 类型变量属于引用数据类型；
 
 ```java
 class a {
-
 public static void main (String [] args){
     char c= 'a';
  	int num = 10;
@@ -458,7 +457,7 @@ switch结构中的表达式中：只能是以下六种数据类型：
 
 **（不允许用boolean类型）**
 
-case不允许有范围，即不能是boolean类型
+case不允许有范围，是一个确定的值，不能是boolean类型
 
 switch-case 和if-else的选择情况：
 
@@ -903,8 +902,6 @@ import java.util.Arrays
 方法=成员函数=Method
 
 对象是引用变量
-
-
 
 新建对象
 
